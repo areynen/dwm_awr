@@ -1,8 +1,10 @@
 My hacked on version of dwm:
 implemented diffs are as follows: 
 
-* selfrestart:
-    https://dwm.suckless.org/patches/selfrestart/   
+* restartsig 
+    https://dwm.suckless.org/patches/restartsig/   
+* useless gaps
+    https://dwm.suckless.org/patches/uselessgaps/
 
 dwm - dynamic window manager
 ============================
