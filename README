@@ -7,6 +7,8 @@ implemented diffs are as follows:
     https://dwm.suckless.org/patches/uselessgaps/
 * Transparency Alpha
     https://dwm.suckless.org/patches/alpha/
+* Xresources
+    https://dwm.suckless.org/patches/xrdb/
 
 dwm - dynamic window manager
 ============================
