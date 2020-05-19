@@ -5,6 +5,8 @@ implemented diffs are as follows:
     https://dwm.suckless.org/patches/restartsig/   
 * useless gaps
     https://dwm.suckless.org/patches/uselessgaps/
+* Transparency Alpha
+    https://dwm.suckless.org/patches/alpha/
 
 dwm - dynamic window manager
 ============================
