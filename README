@@ -9,6 +9,8 @@ implemented diffs are as follows:
     https://dwm.suckless.org/patches/alpha/
 * Xresources
     https://dwm.suckless.org/patches/xrdb/
+* Status Commands for DWMBlocks
+    https://dwm.suckless.org/patches/statuscmd/
 
 dwm - dynamic window manager
 ============================
