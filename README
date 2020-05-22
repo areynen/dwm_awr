@@ -17,6 +17,8 @@ implemented diffs are as follows:
     https://dwm.suckless.org/patches/dwmc/
 * Resize Corners
     https://dwm.suckless.org/patches/resizecorners/
+* Cycle Layouts
+    https://dwm.suckless.org/patches/cyclelayouts/
 
 dwm - dynamic window manager
 ============================
