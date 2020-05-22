@@ -2,7 +2,7 @@
 # Setting screens
 ~/.screenlayout/dual-offset-home.sh
 # Wallpaper
-feh --bg-center ~/Pictures/wallpaper_blurry.png
+feh --bg-center ~/Pictures/wallpaper.png
 # Theme
 wal --theme ~/theme >/dev/null
 # Picom compositor
