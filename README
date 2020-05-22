@@ -15,6 +15,8 @@ implemented diffs are as follows:
     https://dwm.suckless.org/patches/autostart/
 * DWMC - for scripting functions
     https://dwm.suckless.org/patches/dwmc/
+* Resize Corners
+    https://dwm.suckless.org/patches/resizecorners/
 
 dwm - dynamic window manager
 ============================
