@@ -5,6 +5,7 @@
 feh --bg-center ~/Pictures/wallpaper.png
 # Theme
 wal --theme ~/theme >/dev/null
+dwmc xrdb
 # Picom compositor
 pgrep -x picom >/dev/null || picom &
 # Dunst notifcations
