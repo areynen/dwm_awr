@@ -11,6 +11,10 @@ implemented diffs are as follows:
     https://dwm.suckless.org/patches/xrdb/
 * Status Commands for DWMBlocks
     https://dwm.suckless.org/patches/statuscmd/
+* Auto Start Script
+    https://dwm.suckless.org/patches/autostart/
+* DWMC - for scripting functions
+    https://dwm.suckless.org/patches/dwmc/
 
 dwm - dynamic window manager
 ============================
