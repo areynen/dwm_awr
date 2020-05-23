@@ -16,6 +16,8 @@ pgrep -x udiskie >/dev/null || udiskie &
 pgrep -x parcellite >/dev/null || parcellite &
 # DWM Blocks
 pgrep -x dwmblocks >/dev/null || dwmblocks &
+# sxhkd startup
+pgrep -x sxhkd >/dev/null || sxhkd &
 # MPD
 mpd &
 mdpscribbler &
