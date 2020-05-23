@@ -50,6 +50,7 @@ static const Rule rules[] = {
 	{ NULL,				NULL,			"LibreOffice",  1 << 4,       0,           -1 },
 	// 6 - Games
 	{ "Lutris", 		NULL,       	NULL,       	1 << 5,       0,           -1 },
+	{ "retroarch", 		NULL,       	NULL,       	1 << 5,       0,           -1 },
 	{ NULL, 			"multimc",     	NULL,       	1 << 5,       0,           -1 },
 	// 7- Video
 	{ "mpv", 			NULL,       	NULL,       	1 << 6,       0,           -1 },
