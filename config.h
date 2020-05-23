@@ -6,7 +6,7 @@ static const unsigned int gappx     = 2;        /* gaps between windows */
 static const unsigned int snap      = 10;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Sauce Code Pro Mono:size=10", "Noto Color Emoji:size=8" };
+static const char *fonts[]          = { "Symbols Nerd Font:style=2048-em", "DejaVu Sans:size=10", "Noto Color Emoji:size=8" };
 static const char dmenufont[]       = "monospace:size=10";
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
@@ -14,7 +14,7 @@ static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#005577";
 static char selbgcolor[]            = "#005577";
-static const unsigned int baralpha = 0xd0;
+static const unsigned int baralpha = 0xcc;
 static const unsigned int borderalpha = OPAQUE;
 static char *colors[][3] = {
        /*               fg           bg           border   */
@@ -28,16 +28,44 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", " " };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class      		instance    title       tags mask     isfloating   monitor */
+	// 1 - Terminal
+	{ "St",  	  		NULL,       	NULL,       	1 << 0,       0,           -1 },
+	// 2 - Web
+	{ "firefox",  		NULL,       	NULL,       	1 << 1,       0,           -1 },	
+	// 3 - Code/IDE (not vim)
+	{ "code-oss", 		NULL,       	NULL,       	1 << 2,       0,           -1 },
+	// 4 - Files
+	{ "Thunar", 		NULL,       	NULL,       	1 << 3,       0,           -1 },
+		// st -c "ranger" -e ranger
+	{ "ranger",		 		NULL,       	NULL,   	1 << 3,       0,           -1 },
+	// 5 - LO office
+	{ NULL,		 		"libreoffice",	NULL,       	1 << 4,       0,           -1 },
+	{ NULL,				NULL,			"LibreOffice",  1 << 4,       0,           -1 },
+	// 6 - Games
+	{ "Lutris", 		NULL,       	NULL,       	1 << 5,       0,           -1 },
+	{ NULL, 			"multimc",     	NULL,       	1 << 5,       0,           -1 },
+	// 7- Video
+	{ "mpv", 			NULL,       	NULL,       	1 << 6,       0,           -1 },
+	// 8 - Music
+		// st -c "ncmpcpp" -e ncmpcpp
+	{ "ncmpcpp", 		NULL,       	NULL,       	1 << 7,       0,           -1 },
+	// 9 - Social
+	{ "discord", 		NULL,       	NULL,       	1 << 8,       0,           -1 },
+	{ "Discord Updater",NULL,       	NULL,       	1 << 8,       0,           -1 },
+	{ "Thunderbird",	NULL,       	NULL,       	1 << 8,       0,           -1 },
+	// Floating
+	{ "firefox",    	"Browser",     	"About Mozilla Firefox",       0,            1,           -1 },
+	{ "Galculator",		NULL,       	NULL,       	0,		       1,           -1 },
+	{ "Gpick",			NULL,       	NULL,       	0,		       1,           -1 },
+	{ "Pavucontrol",	NULL,       	NULL,       	0,		       1,           -1 },
 };
 
 /* layout(s) */
