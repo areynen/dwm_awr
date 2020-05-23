@@ -21,6 +21,8 @@ implemented diffs are as follows:
     https://dwm.suckless.org/patches/cyclelayouts/
 * Scratchpad
     https://dwm.suckless.org/patches/scratchpads/
+* Focus on net active
+    https://dwm.suckless.org/patches/focusonnetactive/
 
 dwm - dynamic window manager
 ============================
