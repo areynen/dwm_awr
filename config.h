@@ -44,7 +44,8 @@ static const Rule rules[] = {
 	// 4 - Files
 	{ "Thunar", 		NULL,       	NULL,       	1 << 3,       0,           -1 },
 		// st -c "ranger" -e ranger
-	{ "ranger",		 		NULL,       	NULL,   	1 << 3,       0,           -1 },
+	{ "ranger",			NULL,       	NULL,   	1 << 3,       0,           -1 },
+	{ "JDownloader",	NULL,       	NULL,   	1 << 3,       0,           -1 },
 	// 5 - Office/Other Editors
 	{ NULL,		 		"libreoffice",	NULL,       	1 << 4,       0,           -1 },
 	{ NULL,				NULL,			"LibreOffice",  1 << 4,       0,           -1 },
