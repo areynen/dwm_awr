@@ -45,9 +45,11 @@ static const Rule rules[] = {
 	{ "Thunar", 		NULL,       	NULL,       	1 << 3,       0,           -1 },
 		// st -c "ranger" -e ranger
 	{ "ranger",		 		NULL,       	NULL,   	1 << 3,       0,           -1 },
-	// 5 - LO office
+	// 5 - Office/Other Editors
 	{ NULL,		 		"libreoffice",	NULL,       	1 << 4,       0,           -1 },
 	{ NULL,				NULL,			"LibreOffice",  1 << 4,       0,           -1 },
+	{ "Gimp",	 		NULL,       	NULL,		   	1 << 4,       0,           -1 },
+	{ "Inkscape", 		NULL,       	NULL,		   	1 << 4,       0,           -1 },
 	// 6 - Games
 	{ "Lutris", 		NULL,       	NULL,       	1 << 5,       0,           -1 },
 	{ "retroarch", 		NULL,       	NULL,       	1 << 5,       0,           -1 },
