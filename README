@@ -23,6 +23,8 @@ implemented diffs are as follows:
     https://dwm.suckless.org/patches/scratchpads/
 * Focus on net active
     https://dwm.suckless.org/patches/focusonnetactive/
+* Per Tag per tag sel
+    https://dwm.suckless.org/patches/pertag/
 
 dwm - dynamic window manager
 ============================
