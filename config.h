@@ -34,41 +34,42 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      		instance    title       tags mask     isfloating   monitor */
+	/* class      		instance    	title       	tags mask	iscentered	isfloating   monitor */
 	// 1 - Terminal
-	{ "St",  	  		NULL,       	NULL,       	1 << 0,       0,           -1 },
+	{ "St",  	  		NULL,       	NULL,       	1 << 0,  		0,    		0,           -1 },
 	// 2 - Web
-	{ "firefox",  		NULL,       	NULL,       	1 << 1,       0,           -1 },	
+	{ "firefox",  		NULL,       	NULL,       	1 << 1,       	0,			0,           -1 },	
 	// 3 - Code/IDE (not vim)
-	{ "code-oss", 		NULL,       	NULL,       	1 << 2,       0,           -1 },
+	{ "code-oss", 		NULL,       	NULL,       	1 << 2,       	0,			0,           -1 },
 	// 4 - Files
-	{ "Thunar", 		NULL,       	NULL,       	1 << 3,       0,           -1 },
+	{ "Thunar", 		NULL,       	NULL,       	1 << 3,       	0,			0,           -1 },
 		// st -c "ranger" -e ranger
-	{ "ranger",			NULL,       	NULL,   	1 << 3,       0,           -1 },
-	{ "JDownloader",	NULL,       	NULL,   	1 << 3,       0,           -1 },
+	{ "ranger",			NULL,       	NULL,   		1 << 3,       	0,			0,           -1 },
+	{ "JDownloader",	NULL,       	NULL,   		1 << 3,       	0,			0,           -1 },
 	// 5 - Office/Other Editors
-	{ NULL,		 		"libreoffice",	NULL,       	1 << 4,       0,           -1 },
-	{ NULL,				NULL,			"LibreOffice",  1 << 4,       0,           -1 },
-	{ "Gimp",	 		NULL,       	NULL,		   	1 << 4,       0,           -1 },
-	{ "Inkscape", 		NULL,       	NULL,		   	1 << 4,       0,           -1 },
+	{ NULL,		 		"libreoffice",	NULL,       	1 << 4,      	0,			0,           -1 },
+	{ NULL,				NULL,			"LibreOffice",  1 << 4,       	0,			0,           -1 },
+	{ "Gimp",	 		NULL,       	NULL,		   	1 << 4,       	0,			0,           -1 },
+	{ "Inkscape", 		NULL,       	NULL,		   	1 << 4,       	0,			0,           -1 },
 	// 6 - Games
-	{ "Lutris", 		NULL,       	NULL,       	1 << 5,       0,           -1 },
-	{ "retroarch", 		NULL,       	NULL,       	1 << 5,       0,           -1 },
-	{ NULL, 			"multimc",     	NULL,       	1 << 5,       0,           -1 },
+	{ "Steam", 			"Steam",       	NULL,       	1 << 5,       	0,			0,           -1 },
+	{ "Lutris", 		NULL,       	NULL,       	1 << 5,       	0,			0,           -1 },
+	{ "retroarch", 		NULL,       	NULL,       	1 << 5,       	0,			0,           -1 },
+	{ NULL, 			"multimc",     	NULL,       	1 << 5,       	0,			0,           -1 },
 	// 7- Video
-	{ "mpv", 			NULL,       	NULL,       	1 << 6,       0,           -1 },
+	{ "mpv", 			NULL,       	NULL,       	1 << 6,       	0,			0,           -1 },
 	// 8 - Music
 		// st -c "ncmpcpp" -e ncmpcpp
-	{ "ncmpcpp", 		NULL,       	NULL,       	1 << 7,       0,           -1 },
+	{ "ncmpcpp", 		NULL,       	NULL,       	1 << 7,       	0,			0,           -1 },
 	// 9 - Social
-	{ "discord", 		NULL,       	NULL,       	1 << 8,       0,           -1 },
-	{ "Discord Updater",NULL,       	NULL,       	1 << 8,       0,           -1 },
-	{ "Thunderbird",	NULL,       	NULL,       	1 << 8,       0,           -1 },
+	{ "discord", 		NULL,       	NULL,       	1 << 8,       	0,			0,           -1 },
+	{ "Discord Updater",NULL,       	NULL,       	1 << 8,       	0,			0,           -1 },
+	{ "Thunderbird",	NULL,       	NULL,       	1 << 8,       	0,			0,           -1 },
 	// Floating
-	{ "firefox",    	"Browser",     	"About Mozilla Firefox",       0,            1,           -1 },
-	{ "Galculator",		NULL,       	NULL,       	0,		       1,           -1 },
-	{ "Gpick",			NULL,       	NULL,       	0,		       1,           -1 },
-	{ "Pavucontrol",	NULL,       	NULL,       	0,		       1,           -1 },
+	{ "firefox",    	"Browser",     	"About Mozilla Firefox",0,     	1,			1,           -1 },
+	{ "Galculator",		NULL,       	NULL,       	0,		       	1,			1,           -1 },
+	{ "Gpick",			NULL,       	NULL,       	0,		       	1,			1,           -1 },
+	{ "Pavucontrol",	NULL,       	NULL,       	0,		       	1,			1,           -1 },
 };
 
 /* layout(s) */
