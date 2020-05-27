@@ -20,6 +20,6 @@ pgrep -x dwmblocks >/dev/null || dwmblocks &
 pgrep -x sxhkd >/dev/null || sxhkd &
 # MPD
 mpd &
-mdpscribbler &
+mpdscribble &
 # Stop PC Beep
 xset -b
