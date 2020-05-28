@@ -36,7 +36,7 @@ static const Rule rules[] = {
 	 */
 	/* class      		instance    	title       	tags mask	switchtotag	iscentered	isfloating   monitor */
 	// 1 - Terminal
-	{ "St",  	  		NULL,       	NULL,       	1 << 0,  		1 << 0,		0,    		0,           -1 },
+	{ "St",  	  		"st",       	NULL,       	1 << 0,  		1 << 0,		0,    		0,           -1 },
 	// 2 - Web
 	{ "firefox",  		NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
 	// 3 - Code/IDE (not vim)
@@ -98,7 +98,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-n", scratchpadname, "-g", "120x34", NULL };
 
 // DWM binds here, for programs using sxhkd
 static Key keys[] = {
