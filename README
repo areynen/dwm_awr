@@ -29,6 +29,8 @@ implemented diffs are as follows:
     https://dwm.suckless.org/patches/center/
 * Switch to tag (modified to not move back)
     https://dwm.suckless.org/patches/switchtotag/
+* Actual Fullscreen
+    https://dwm.suckless.org/patches/actualfullscreen/
 
 dwm - dynamic window manager
 ============================
