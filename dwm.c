@@ -177,6 +177,7 @@ static void arrange(Monitor *m);
 static void arrangemon(Monitor *m);
 static void attach(Client *c);
 static void attachstack(Client *c);
+static void centeronwindow(void);
 static void buttonpress(XEvent *e);
 static void checkotherwm(void);
 static void cleanup(void);
@@ -538,6 +539,12 @@ buttonpress(XEvent *e)
 		if (click == buttons[i].click && buttons[i].func && buttons[i].button == ev->button
 		&& CLEANMASK(buttons[i].mask) == CLEANMASK(ev->state))
 			buttons[i].func(click == ClkTagBar && buttons[i].arg.i == 0 ? &arg : &buttons[i].arg);
+}
+
+void
+centeronwindow(void)
+{
+	system("eval $(xdotool getwindowfocus getwindowgeometry --shell); xdotool mousemove $((X + WIDTH / 2)) $((Y + HEIGHT / 2))");
 }
 
 void
@@ -963,6 +970,7 @@ focusmon(const Arg *arg)
 	unfocus(selmon->sel, 0);
 	selmon = m;
 	focus(NULL);
+	centeronwindow();
 }
 
 void
@@ -988,6 +996,7 @@ focusstack(const Arg *arg)
 	if (c) {
 		focus(c);
 		restack(selmon);
+		centeronwindow();
 	}
 }
 
