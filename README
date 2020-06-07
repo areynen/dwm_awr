@@ -35,6 +35,8 @@ implemented diffs are as follows:
     https://dwm.suckless.org/patches/vanitygaps/
 * No Borders
     https://dwm.suckless.org/patches/noborder/
+* Rotate Stack
+    https://dwm.suckless.org/patches/rotatestack/
 
 dwm - dynamic window manager
 ============================
