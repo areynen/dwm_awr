@@ -101,8 +101,10 @@ static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-n", scratchpadname, "-g", "120x34", NULL };
 
 // DWM binds here, for programs using sxhkd
+#include "focusurgent.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_u,      focusurgent,    {0} },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -232,4 +234,5 @@ static Signal signals[] = {
 	{ "setlayout",      setlayout },
 	{ "setlayoutex",    setlayoutex },
 	{ "xrdb",    		xrdb },
+	{ "focusurgent",    focusurgent },
 };
