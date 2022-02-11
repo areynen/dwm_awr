@@ -18,7 +18,15 @@ pgrep -x dunst >/dev/null || dunst &
 #pgrep -x parcellite >/dev/null || parcellite -n &
 pgrep -x clipmenud >/dev/null || clipmenud &
 # DWM Blocks
-pgrep -x dwmblocks >/dev/null || dwmblocks &
+if (pgrep -x dwm)
+then
+    blocks_program="dwmblocks"
+elif (pgrep -x i3)
+then
+    blocks_program="i3blocks"
+else
+    exit
+fi
 # sxhkd startup
 pgrep -x sxhkd >/dev/null || sxhkd &
 # MPD

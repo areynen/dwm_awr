@@ -1785,7 +1785,7 @@ run(void)
 
 void
 runAutostart(void) {
-	system("sh ~/Documents/dwm/startup.sh &");
+	system("sh ~/.local/bin/startup.sh &");
 }
 
 void
