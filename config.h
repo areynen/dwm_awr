@@ -10,14 +10,15 @@ static const unsigned int gappov    = 4;       /* vert outer gap between windows
 static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Symbols Nerd Font:style=2048-em", "DejaVu Sans:size=10", "Noto Color Emoji:size=8" };
+static const char *fonts[]          = { "Symbols Nerd Font:style:size=14", "DejaVu Sans:size=12", "Noto Color Emoji:size=8" };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
 static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#005577";
 static char selbgcolor[]            = "#005577";
-static const unsigned int baralpha = 0xcc;
+//static const unsigned int baralpha = 0xcc;
+static const unsigned int baralpha = 0xff;
 static const unsigned int borderalpha = OPAQUE;
 static char *colors[][3] = {
        /*               fg           bg           border   */
@@ -41,8 +42,12 @@ static const Rule rules[] = {
 	/* class      		instance    	title       	tags mask	switchtotag	iscentered	isfloating   monitor */
 	// 1 - Terminal
 	{ "St",  	  		"st",       	NULL,       	1 << 0,  		1 << 0,		0,    		0,           -1 },
+	{ "newsboat",  		"st",       	NULL,       	1 << 0,  		1 << 0,		0,    		0,           -1 },
 	// 2 - Web
+	{ "FireFox",  		NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
 	{ "firefox",  		NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
+	{ "LibreWolf", 		NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
+	{ "librewolf", 		NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
 	// 3 - Code/IDE (not vim)
 	{ "code-oss", 		NULL,       	NULL,       	1 << 2,       	1 << 2,		0,			0,           -1 },
 	// 4 - Files
@@ -50,6 +55,7 @@ static const Rule rules[] = {
 		// st -c "ranger" -e ranger
 	{ "ranger",			NULL,       	NULL,   		1 << 3,       	1 << 3,		0,			0,           -1 },
 	{ "JDownloader",	NULL,       	NULL,   		1 << 3,       	1 << 3,		0,			0,           -1 },
+	{ NULL,         	NULL,       	"JDownloader 2",1 << 3,       	1 << 3,		0,			0,           -1 },
 	// 5 - Office/Other Editors
 	{ NULL,		 		"libreoffice",	NULL,       	1 << 4,      	1 << 4,		0,			0,           -1 },
 	{ NULL,				NULL,			"LibreOffice",  1 << 4,       	1 << 4,		0,			0,           -1 },
@@ -65,26 +71,32 @@ static const Rule rules[] = {
 	// 8 - Music
 		// st -c "ncmpcpp" -e ncmpcpp
 	{ "ncmpcpp", 		NULL,       	NULL,       	1 << 7,       	1 << 7,		0,			0,           -1 },
+	{ "Ario",    		NULL,       	NULL,       	1 << 7,       	1 << 7,		0,			0,           -1 },
 	// 9 - Social
 	{ "discord", 		NULL,       	NULL,       	1 << 8,       	1 << 8,		0,			0,           -1 },
-	{ "Discord Updater",NULL,       	NULL,       	1 << 8,       	1 << 8,		0,			0,           -1 },
+	{ "neomutt", 		NULL,       	NULL,       	1 << 8,       	1 << 8,		0,			0,           -1 },
+	{ "Discord Updater",NULL,       	NULL,       	1 << 8,       	0,			0,			0,           -1 },
 	{ "Thunderbird",	NULL,       	NULL,       	1 << 8,       	1 << 8,		0,			0,           -1 },
 	// Floating
 	{ "firefox",    	"Browser",     	"About Mozilla Firefox",0,     	0,			1,			1,           -1 },
+	{ NULL,    	"Browser",   	"About LibreWolf",  0,       	0,			1,			1,           -1 },
 	{ "Galculator",		NULL,       	NULL,       	0,		       	0,			1,			1,           -1 },
 	{ "Gpick",			NULL,       	NULL,       	0,		       	0,			1,			1,           -1 },
 	{ "Pavucontrol",	NULL,       	NULL,       	0,		       	0,			1,			1,           -1 },
+	{ "fehfloat",   	"feh",       	NULL,       	0,		       	0,			1,			1,           -1 },
 };
 
 /* layout(s) */
 static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int decorhints  = 1;    /* 1 means respect decoration hints */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "[]=",      tile },    /* first entry is default */
 	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "TTT",      bstack },
 	{ "[M]",      monocle },
 	{ NULL,       NULL },
 };
@@ -108,7 +120,7 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-n", scratch
 #include "focusurgent.c"
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_u,      focusurgent,    {0} },
+//	{ MODKEY,                       XK_u,      focusurgent,    {0} },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -125,8 +137,9 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
+	{ MODKEY|ShiftMask,             XK_Tab,    focusmon,       {.i = -1 } },
+	{ MODKEY|Mod1Mask,              XK_Tab,    focusstack,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,			            XK_f,      togglefullscr,  {0} },
 	{ MODKEY|ControlMask,			XK_comma,  cyclelayout,    {.i = -1 } },
@@ -172,6 +185,7 @@ static Button buttons[] = {
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+	{ ClkRootWin,           0,              Button2,        desktopmenu,    {0} },
 };
 
 void
