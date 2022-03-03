@@ -48,8 +48,11 @@ static const Rule rules[] = {
 	{ "firefox",  		NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
 	{ "LibreWolf", 		NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
 	{ "librewolf", 		NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
+	{ "qutebrowser",	NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
 	// 3 - Code/IDE (not vim)
 	{ "code-oss", 		NULL,       	NULL,       	1 << 2,       	1 << 2,		0,			0,           -1 },
+	{ NULL,		 		"vscodium",    	NULL,       	1 << 2,       	1 << 2,		0,			0,           -1 },
+	{ "VSCodium",		NULL,  		  	NULL,       	1 << 2,       	1 << 2,		0,			0,           -1 },
 	// 4 - Files
 	{ "Thunar", 		NULL,       	NULL,       	1 << 3,       	1 << 3,		0,			0,           -1 },
 		// st -c "ranger" -e ranger
