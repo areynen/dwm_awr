@@ -32,7 +32,7 @@ static const unsigned int alphas[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", " " };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "󰆅" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -83,6 +83,7 @@ static const Rule rules[] = {
 	// Floating
 	{ "firefox",    	"Browser",     	"About Mozilla Firefox",0,     	0,			1,			1,           -1 },
 	{ NULL,    	"Browser",   	"About LibreWolf",  0,       	0,			1,			1,           -1 },
+	{ NULL,    	"Browser",   	NULL,  0,       	0,			1,			1,           -1 },
 	{ "Galculator",		NULL,       	NULL,       	0,		       	0,			1,			1,           -1 },
 	{ "Gpick",			NULL,       	NULL,       	0,		       	0,			1,			1,           -1 },
 	{ "Pavucontrol",	NULL,       	NULL,       	0,		       	0,			1,			1,           -1 },
@@ -101,6 +102,7 @@ static const Layout layouts[] = {
 	{ "><>",      NULL },    /* no layout function means floating behavior */
 	{ "TTT",      bstack },
 	{ "[M]",      monocle },
+	{ "##",      gaplessgrid },
 	{ NULL,       NULL },
 };
 

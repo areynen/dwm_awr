@@ -20,10 +20,10 @@ pgrep -x clipmenud >/dev/null || clipmenud &
 # DWM Blocks
 if (pgrep -x dwm)
 then
-    blocks_program="dwmblocks"
+    pgrep -x dwmblocks >/dev/null || dwmblocks &
 elif (pgrep -x i3)
 then
-    blocks_program="i3blocks"
+    pgrep -x i3blocks >/dev/null || i3blocks &
 else
     exit
 fi
