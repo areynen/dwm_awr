@@ -10,7 +10,7 @@ static const unsigned int gappov    = 4;       /* vert outer gap between windows
 static const int smartgaps          = 1;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Symbols Nerd Font:style:size=14", "DejaVu Sans:size=12", "Noto Color Emoji:size=8" };
+static const char *fonts[]          = { "Symbols Nerd Font:style:size=12", "DejaVu Sans:size=10", "Noto Color Emoji:size=8" };
 static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#bbbbbb";
@@ -42,7 +42,9 @@ static const Rule rules[] = {
 	/* class      		instance    	title       	tags mask	switchtotag	iscentered	isfloating   monitor */
 	// 1 - Terminal
 	{ "St",  	  		"st",       	NULL,       	1 << 0,  		1 << 0,		0,    		0,           -1 },
+	{ "kitty",  	  	"kitty",       	NULL,       	1 << 0,  		1 << 0,		0,    		0,           -1 },
 	{ "newsboat",  		"st",       	NULL,       	1 << 0,  		1 << 0,		0,    		0,           -1 },
+	{ "newsboat",  		"kitty",       	NULL,       	1 << 0,  		1 << 0,		0,    		0,           -1 },
 	// 2 - Web
 	{ "FireFox",  		NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
 	{ "firefox",  		NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
@@ -79,6 +81,7 @@ static const Rule rules[] = {
 	{ "discord", 		NULL,       	NULL,       	1 << 8,       	1 << 8,		0,			0,           -1 },
 	{ "neomutt", 		NULL,       	NULL,       	1 << 8,       	1 << 8,		0,			0,           -1 },
 	{ "Discord Updater",NULL,       	NULL,       	1 << 8,       	0,			0,			0,           -1 },
+	{ "thunderbird-default",	NULL,       	NULL,       	1 << 8,       	1 << 8,		0,			0,           -1 },
 	{ "Thunderbird",	NULL,       	NULL,       	1 << 8,       	1 << 8,		0,			0,           -1 },
 	// Floating
 	{ "firefox",    	"Browser",     	"About Mozilla Firefox",0,     	0,			1,			1,           -1 },
@@ -119,6 +122,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char scratchpadname[] = "scratchpad";
+// static const char *scratchpadcmd[] = { "kitty", "-T", scratchpadname, "--name", scratchpadname, "-o", "initial_window_height=40", NULL };
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-n", scratchpadname, "-g", "120x34", NULL };
 
 // DWM binds here, for programs using sxhkd
