@@ -77,6 +77,7 @@ static const Rule rules[] = {
 		// st -c "ncmpcpp" -e ncmpcpp
 	{ "ncmpcpp", 		NULL,       	NULL,       	1 << 7,       	1 << 7,		0,			0,           -1 },
 	{ "Ario",    		NULL,       	NULL,       	1 << 7,       	1 << 7,		0,			0,           -1 },
+	{ "Supersonic", 	NULL,       	NULL,       	1 << 7,       	1 << 7,		0,			0,           -1 },
 	// 9 - Social
 	{ "discord", 		NULL,       	NULL,       	1 << 8,       	1 << 8,		0,			0,           -1 },
 	{ "neomutt", 		NULL,       	NULL,       	1 << 8,       	1 << 8,		0,			0,           -1 },
