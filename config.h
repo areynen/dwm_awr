@@ -195,7 +195,7 @@ static Button buttons[] = {
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
-	{ ClkRootWin,           0,              Button2,        desktopmenu,    {0} },
+	{ ClkRootWin,           0,              Button2,        desktopmenu,    {0} },	//for xmenu
 };
 
 void
