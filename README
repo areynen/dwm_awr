@@ -37,6 +37,8 @@ implemented diffs are as follows:
     https://dwm.suckless.org/patches/noborder/
 * Rotate Stack
     https://dwm.suckless.org/patches/rotatestack/
+* Hide Vacant Tags
+    https://dwm.suckless.org/patches/hide_vacant_tags/
 
 dwm - dynamic window manager
 ============================
