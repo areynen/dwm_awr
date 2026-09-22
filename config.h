@@ -51,6 +51,7 @@ static const Rule rules[] = {
 	{ "LibreWolf", 		NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
 	{ "librewolf", 		NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
 	{ "qutebrowser",	NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
+	{ "Mullvad Browser",NULL,       	NULL,       	1 << 1,       	1 << 1,		0,			0,           -1 },	
 	// 3 - Code/IDE (not vim)
 	{ "code-oss", 		NULL,       	NULL,       	1 << 2,       	1 << 2,		0,			0,           -1 },
 	{ NULL,		 		"vscodium",    	NULL,       	1 << 2,       	1 << 2,		0,			0,           -1 },
